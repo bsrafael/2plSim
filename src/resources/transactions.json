@@ -1,0 +1,70 @@
+[
+  {
+    "identifier": "T1",
+    "operations": [
+      { "type": "lock", "target": "a", "value": "exclusive" },
+      { "type": "read", "target": "a" },
+      { "type": "update", "target": "a", "value": "50" },
+      { "type": "write", "target": "a" },
+      { "type": "lock", "target": "b", "value": "exclusive" },
+      { "type": "read", "target": "b" },
+      { "type": "update", "target": "b", "value": "-50" },
+      { "type": "write", "target": "b" },
+      { "type": "unlock", "target": "a" },
+      { "type": "unlock", "target": "b" }
+    ]
+  },
+  {
+    "identifier": "T2",
+    "operations": [
+      { "type": "lock", "target": "a", "value": "shared" },
+      { "type": "read", "target": "a" },
+      { "type": "lock", "target": "b", "value": "shared" },
+      { "type": "read", "target": "b" },
+      { "type": "unlock", "target": "a" },
+      { "type": "unlock", "target": "b" }
+    ]
+  },
+  {
+    "identifier": "T3",
+    "operations": [
+      { "type": "lock", "target": "a", "value": "exclusive" },
+      { "type": "read", "target": "a" },
+      { "type": "update", "target": "a", "value": "-15" },
+      { "type": "write", "target": "a" },
+      { "type": "lock", "target": "b", "value": "exclusive" },
+      { "type": "read", "target": "b" },
+      { "type": "update", "target": "b", "value": "15" },
+      { "type": "write", "target": "b" },
+      { "type": "unlock", "target": "a" },
+      { "type": "unlock", "target": "b" }
+    ]
+  },
+  {
+    "identifier": "T4",
+    "operations": [
+      { "type": "lock", "target": "a", "value": "shared" },
+      { "type": "read", "target": "a" },
+      { "type": "lock", "target": "b", "value": "shared" },
+      { "type": "read", "target": "b" },
+      { "type": "unlock", "target": "a" },
+      { "type": "unlock", "target": "b" }
+    ]
+  },
+  {
+    "identifier": "T5",
+    "operations": [
+      { "type": "lock", "target": "a", "value": "exclusive" },
+      { "type": "read", "target": "a" },
+      { "type": "update", "target": "a", "value": "33" },
+      { "type": "write", "target": "a" },
+      { "type": "lock", "target": "b", "value": "exclusive" },
+      { "type": "read", "target": "b" },
+      { "type": "update", "target": "b", "value": "-33" },
+      { "type": "write", "target": "b" },
+      { "type": "unlock", "target": "a" },
+      { "type": "unlock", "target": "b" }
+    ]
+  }
+
+]
